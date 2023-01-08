@@ -80,6 +80,11 @@ body {
     align-items: center;
 }
 
+.svg:hover {
+    filter: invert(15%) sepia(32%) saturate(2051%) hue-rotate(202deg) brightness(102%) contrast(87%);
+    transition: 0.4s;
+}
+
 .svg-middle {
     margin: 0 70px;
 }
