@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+
+#heading {
+    background-color: #2B3467;
+}
+
+ #heading nav div {
+     margin: 2% 10%; 
+}
+
+#heading nav div a{
+    font-size: 1rem;
+    color: #FCFFE7;
+} 
+
+ #heading nav div a i{
+    color: #FCFFE7;
+     margin-right: 8%; 
+ } 
+ 
+ .padding {
+    padding-top: 4%;
+    padding-bottom: 10%;
+    padding: 0 auto;
+ }
+
+.form {
+    margin-top: 20px;
+    width: 60%;
+    height: 55px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border: 0 solid transparent;
+}
+
+.form:focus{
+    border: 0 solid transparent;
+}
+
+.col h2 {
+    font-weight: 900;
+}
+
+.btn-custom {
+    font-size: 1.1rem;
+    margin-top: -0.3%;
+    margin-left: -13%;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+#last h2 {
+    margin-top: 50px;
+    color: #2B3467;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
+.col-lg-12 i {
+    color: #2B3467;
+}
+
+.svg-main {
+    margin: 5%;
+}
+
+.svg {
+    width: 100px;
+    filter: invert(51%) sepia(12%) saturate(8%) hue-rotate(335deg) brightness(96%) contrast(86%);
+    /* margin-left: 70px; */
+    align-items: center;
+}
+
+.svg-middle {
+    margin: 0 70px;
+}
+
+#footer {
+    color: #2B3467;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+
+    .form {
+        margin-top: 20px;
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        margin: auto;
+        size: 50%;
+    }
+
+    
+}
+
+@media (max-width: 767px){
+
+    .form {
+        height: 45px;
+    }
+
+    .btn-custom {
+        margin-top: 5%;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .padding {
+        margin-top: 28%;
+        padding-bottom: 50%;
+    }
+
+    .svg {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .svg-middle {
+        margin: 70px auto;
+    }
+
+    #footer {
+        margin-top: 50px;
+    }
+
+    #last h2 {
+        margin-bottom: 50px;
+    }
+}
