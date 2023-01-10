@@ -97,39 +97,28 @@ body {
 }
 /* Loader */
 
-.spinner {
-    width: 56px;
-    height: 56px;
-    display: grid;
-    border: 4.5px solid #0000;
-    border-radius: 50%;
-    border-color: #bbbcd5 #0000;
-    animation: spinner-e04l1k 1.2s infinite linear;
-    margin: -100px auto;
+.progress {
+    width: 172.8px;
+    height: 31.7px;
+    border-radius: 28.8px;
+    color: #eb455f;
+    border: 2.9px solid;
+    position: relative;
  }
  
- .spinner::before,
- .spinner::after {
+ .progress::before {
     content: "";
-    grid-area: 1/1;
+    position: absolute;
     margin: 2.9px;
-    border: inherit;
-    border-radius: 50%;
+    inset: 0 100% 0 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: progress-pf82op 15s infinite;
  }
  
- .spinner::before {
-    border-color: #fefefe #0000;
-    animation: inherit;
-    animation-duration: 0.6s;
-    animation-direction: reverse;
- }
- 
- .spinner::after {
-    margin: 11.6px;
- }
- @keyframes spinner-e04l1k {
+ @keyframes progress-pf82op {
     100% {
-       transform: rotate(1turn);
+       inset: 0;
     }
  }
 
@@ -183,6 +172,17 @@ body {
 
 #thumbnail {
     width: 20%;
+}
+
+#spin {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+.error {
+    margin-top: -100px;
+    color: #eb455f;
 }
 
 @media (max-width: 1200px) {
@@ -264,10 +264,14 @@ body {
     #js {
         margin-top: -200px;
     }
-    #spin {
+    /* #spin {
         margin-top: -200px;
-    }
+    } */
     .download-padding p {
         margin-top: 20px;
     }
+
+    #spin {
+        margin-top: -210px;
+     }
 }

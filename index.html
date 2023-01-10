@@ -14,7 +14,7 @@
     <section id="heading">
         <nav class="navbar">
             <div class="container">  
-                <a class="navbar-brand" href="#"><i class="bi bi-cloud-arrow-down-fill fa-10x"></i>MrTube</a>
+                <a class="navbar-brand" href="/"><i class="bi bi-cloud-arrow-down-fill fa-10x"></i>MrTube</a>
             </div>
         </nav>
         <div class="container text-center padding">
@@ -26,7 +26,7 @@
             <div class="row">
               <div class="col text-center">
                   <form  id="form" onsubmit="onFormSubmit()">
-                      <input type="text" placeholder="Paste Your Youtube Link" class="form" id="value-name" name="quote">
+                      <input type="text" placeholder="Paste Your Youtube Link" class="form" id="value-name" name="quote" autocomplete="off">
                       <button type="submit" class="btn btn-lg btn-danger btn-custom" id="btn">Download <i class="bi bi-arrow-down-circle"></i></button>
                     </div>
                   </form>
@@ -34,7 +34,9 @@
             </div>
             <div class="row text-center row-custom">
                 <div class="col">
-                    <div class="hide-spin" id="spin"></div>
+                    <!-- <div class="hide-spin" id="spin"></div> -->
+                    <div class="" id="spin"></div>
+                    <h5 class="error"></h5>
                 </div>
             </div>
             <div class="js-btn js-hide" id="js">
