@@ -181,6 +181,10 @@ body {
     text-align: center;
 }
 
+#thumbnail {
+    width: 20%;
+}
+
 @media (max-width: 1200px) {
 
     .form {
@@ -262,5 +266,8 @@ body {
     }
     #spin {
         margin-top: -200px;
+    }
+    .download-padding p {
+        margin-top: 20px;
     }
 }
