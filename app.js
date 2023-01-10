@@ -18,7 +18,8 @@ app.get("/", function(req, res){
 app.post("/button", function(req,res){
 
     let url = req.body.url;
-    const regex = new RegExp('=(.+)$')
+    var urlCode = req.body.urlCode;
+    // const regex = new RegExp('=(.+)$')
 
     const response = axios.post(
         'https://yt1s.com/api/ajaxSearch/index',
@@ -39,7 +40,7 @@ app.post("/button", function(req,res){
         const response = axios.post(
             'https://yt1s.com/api/ajaxConvert/convert',
             new URLSearchParams({
-                'vid': regex.exec(url)[1],
+                'vid': urlCode,
                 'k': rsp.data.links.mp3.mp3128['k']
             }),
             {

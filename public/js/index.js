@@ -13,21 +13,44 @@ $("#spin").addClass("js-hide");
 
     $("#btn").click(function(){
         let value = $("#value-name").val();
-        
-        let a = document.createElement("a");
-        a.setAttribute("href", value)
-        var thumbnailCode = a.search;
-        var validate = a.pathname;
-        thumbnailCode = thumbnailCode.slice(3, thumbnailCode.length);
-        var thumbnailUrl = "https://i.ytimg.com/vi/" + thumbnailCode + "/0.jpg"
-        console.log(thumbnailUrl, validate);
+        var thumbnailCode = "";
+        var validate = "";
+        var thumbnailUrl = "";
+        var a = "";
 
-        if (validate === "/watch"){
+        a = document.createElement("a");
+        a.setAttribute("href", value)
+
+        if ( a.hostname === "www.youtube.com") {
+            a = document.createElement("a");
+            a.setAttribute("href", value)
+
+            thumbnailCode = a.search;
+            validate = a.hostname;
+            thumbnailCode = thumbnailCode.slice(3, thumbnailCode.length);
+            thumbnailUrl = "https://i.ytimg.com/vi/" + thumbnailCode + "/0.jpg"
+            console.log(thumbnailUrl, validate);
+            console.log("done");
+        } else if (a.hostname === "youtu.be") {
+            a = document.createElement("a");
+            a.setAttribute("href", value)
+            thumbnailCode = a.pathname;
+            validate = a.hostname;
+            thumbnailCode = thumbnailCode.slice(1, thumbnailCode.length);
+            thumbnailUrl = "https://i.ytimg.com/vi/" + thumbnailCode + "/0.jpg"
+            console.log(thumbnailUrl, validate);
+            console.log("fuck");
+        }
+        
+        validate = a.hostname;
+        
+
+        if (validate === "www.youtube.com" || validate === "youtu.be"){
             $(".error").text("")
             $.ajax({
                 type: "POST",
                 url: "/button",
-                data: {url: value},
+                data: {url: value, urlCode: thumbnailCode},
                 success: function(res){
                     mp3 = res.mp3Url;
                     duration = res.durationTime;
@@ -67,7 +90,7 @@ $("#spin").addClass("js-hide");
             console.log(validate);
         } else {
             $(".error").text("Please Enter Valid link")
-            console.log("fuck" + validate);
+            console.log(validate);
         }
 
         
